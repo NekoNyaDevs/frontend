@@ -1,0 +1,160 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+$primary: #eb7763;
+$secondary: #adadad;
+$danger: #f44336;
+$warning: #ff9800;
+$success: #7ed957;
+$info: #2196f3;
+$light: #fafafa;
+$dark: #212121;
+
+$themes-color: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "danger": $danger,
+        "warning": $warning,
+        "success": $success,
+        "info": $info,
+        "light": $light,
+        "dark": $dark
+);
+
+$btn-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$btn-border-radius: 3px;
+$btn-transition: all 0.3s ease;
+$btn-hover-bg-tint-amount: 15%;
+$btn-hover-border-tint-amount: 15%;
+$btn-active-bg-tint-amount: 15%;
+$btn-active-border-tint-amount: 15%;
+$btn-padding-x: 20px;
+$btn-padding-y: 8px;
+$btn-line-height: 1.5;
+$btn-font-size: 16px;
+
+.header-icon {
+  font-size: 100px;
+}
+
+.card {
+  transition: all 0.2s;
+  &:hover {
+    transform: translateY(-0.25rem);
+  }
+}
+
+.row.center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@each $name, $color in $themes-color {
+  .btn-#{$name} {
+    @include button-variant($color, $color,
+    $hover-background: darken($color, 10%),
+    $hover-border: darken($color, 10%),
+    $active-background: darken($color, 10%),
+    $active-border: darken($color, 10%)
+    );
+    &:focus, &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.width-main {
+  width: 720px;
+}
+
+.width-normal {
+  width: 100%;
+}
+
+.image-main-frame {
+  width: 720px;
+  height: 720px;
+}
+
+.navbar > .container-fluid > .navbar-brand {
+  position: absolute;
+}
+
+.navbar-brand-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none !important;
+  color: var(--bs-navbar-brand-color);
+}
+
+.navbar-brand-items > p {
+  margin-bottom: auto;
+  margin-top: auto;
+  text-decoration: none;
+  color: var(--bs-navbar-brand-color);
+  border: none;
+}
+
+@media screen and (max-width: 990px) {
+  .navbar > .container-fluid > .navbar-brand {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .image-main-frame {
+    width: 600px !important;
+    height: 600px !important;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .width-main > * {
+    font-size: 0.7rem !important;
+  }
+
+  .width-normal > * {
+    font-size: 0.7rem !important;
+  }
+
+  .width-normal > .btn {
+    padding: 4.5px 16px !important;
+  }
+
+  .width-main > .btn {
+    padding: 4.5px 13px !important;
+  }
+
+  .image-main-frame {
+    width: 360px !important;
+    height: 360px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .image-main-frame {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+
+main {
+  min-height: 100%;
+  flex-grow: 1;
+}
+
+.big-text {
+  font-size: 6rem;
+}
