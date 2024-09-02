@@ -29,11 +29,11 @@ onMounted(() => {
         <h1 class="text-center fs-1 fw-bold">Welcome to <span class="text-primary">Neko</span><span class="text-success">Nya</span>!</h1>
       </div>
     </div>
-    <div class="row center">
-      <div class="rounded p-0 border border-3 border-primary ratio ratio-1x1 image-main-frame">
-        <img :src="imageUrl" v-if="imageUrl" alt="neko" class="object-fit-cover" @error="$event.target.src='https://http.cat/404'" />
+    <div class="d-flex align-items-center justify-content-center flex-wrap flex-column center">
+      <div class="rounded p-0 border border-3 border-primary image-main-frame">
+        <img :src="imageUrl" v-if="imageUrl" alt="neko" class="object-fit-contain main-image" @error="$event.target.src='https://http.cat/404'" />
       </div>
-      <div class="btn-toolbar justify-content-center gap-2 mt-2 width-main" role="group">
+      <div class="btn-toolbar justify-content-center gap-2 mt-2" role="group">
         <button @click="fetchImage" role="button" class="btn btn-primary" :disabled="isLoading">New one!</button>
         <NuxtLink role="button" class="btn btn-primary" to="/random/neko">Better experience in the random page!</NuxtLink>
         <button @click="embeddedDownload" role="button" class="btn btn-primary">Download image!</button>

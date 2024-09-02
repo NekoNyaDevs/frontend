@@ -72,17 +72,18 @@ $btn-font-size: 16px;
   }
 }
 
-.width-main {
-  width: 720px;
-}
-
 .width-normal {
   width: 100%;
 }
 
 .image-main-frame {
-  width: 720px;
-  height: 720px;
+  width: auto;
+  height: auto;
+}
+
+.main-image {
+  max-width: 75vw;
+  max-height: 75vh;
 }
 
 .navbar > .container-fluid > .navbar-brand {
@@ -113,13 +114,6 @@ $btn-font-size: 16px;
   }
 }
 
-@media screen and (max-width: 800px) {
-  .image-main-frame {
-    width: 600px !important;
-    height: 600px !important;
-  }
-}
-
 @media screen and (max-width: 720px) {
   .width-main > * {
     font-size: 0.7rem !important;
@@ -135,18 +129,6 @@ $btn-font-size: 16px;
 
   .width-main > .btn {
     padding: 4.5px 13px !important;
-  }
-
-  .image-main-frame {
-    width: 360px !important;
-    height: 360px !important;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .image-main-frame {
-    width: 300px !important;
-    height: 300px !important;
   }
 }
 
