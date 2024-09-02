@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   appId: "nekonya",
-  buildDir: "dist",
   srcDir: "src",
 
   app: {
