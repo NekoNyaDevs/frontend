@@ -1,75 +1,38 @@
-# Nuxt 3 Minimal Starter
+# 🌿・NekoNya-Storage
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 📝・Description
 
-## Setup
+NekoNya-Frontend is a Nuxt3 TypeScript frontend used in the NekoNya project.
 
-Make sure to install the dependencies:
+If you wish to deploy your own instance of NekoNya-Frontend for any reasons, you can do so by following the instructions below. But please, do not forget to give credit to the original authors of this project.
 
-```bash
-# npm
-npm install
+## 📚・How to deploy
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### 📦・Install
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+$ git clone https://github.com/NekoNyaDevs/nekonya-storage.git
+$ cd nekonya-storage
+$ npm install
 ```
 
-## Production
+> Note: You need to have [Node.js](https://nodejs.org/en/) 18.x.x or more and [TypeScript](https://www.typescriptlang.org) installed.
 
-Build the application for production:
+### 🚀・Run
+
+Production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+$ npm run build
+$ NITRO_PORT=yourport node .output/server/index.mjs
 ```
 
-Locally preview production build:
+Development:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+$ npm run dev
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 📜・License
+
+This project is licensed under the GNU GPL 3.0 License - see the [LICENSE](LICENSE) file for details
