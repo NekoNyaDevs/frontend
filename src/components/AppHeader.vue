@@ -41,8 +41,8 @@
                 Utilities
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/api/v1/8ball?cute=true">8ball</a></li>
-                <li><a class="dropdown-item" href="/api/v1/owoify?text=">Owoify</a></li>
+                <li><NuxtLink class="dropdown-item" to="/8ball">8ball</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/owoify">Owoify</NuxtLink></li>
               </ul>
             </li>
             <li class="nav-item dropdown">

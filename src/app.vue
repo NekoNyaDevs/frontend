@@ -28,4 +28,15 @@ useSeoMeta({
   ogSiteName: 'NekoNya',
   ogLocale: 'en_US'
 });
+
+const checkIfBackendIsOnline = async () => {
+  const res = await $fetch('/api/').catch(() => null);
+  if (!res) {
+    alert('The backend is offline, the website may not work as expected. If the issue persists, please contact us.');
+  }
+};
+
+onMounted(() => {
+  checkIfBackendIsOnline();
+});
 </script>
