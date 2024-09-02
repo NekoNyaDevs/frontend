@@ -2,12 +2,15 @@
 import download from '~/utils/download';
 
 const imageUrl = ref<string>('');
+const isLoading = ref<boolean>(false);
 const type = "neko";
 
 const fetchImage = async () => {
+  isLoading.value = true;
   const res = await $fetch(`/api/v1/random/${type}`).catch(() => null);
   if (!res) imageUrl.value = 'https://http.cat/404';
   else imageUrl.value = res.url;
+  isLoading.value = false;
 };
 
 const embeddedDownload = () => {
@@ -28,10 +31,10 @@ onMounted(() => {
     </div>
     <div class="row center">
       <div class="rounded p-0 border border-3 border-primary ratio ratio-1x1 image-main-frame">
-        <img :src="imageUrl" alt="neko" class="object-fit-cover" @error="$event.target.src='https://http.cat/404'" />
+        <img :src="imageUrl" v-if="imageUrl" alt="neko" class="object-fit-cover" @error="$event.target.src='https://http.cat/404'" />
       </div>
       <div class="btn-toolbar justify-content-center gap-2 mt-2 width-main" role="group">
-        <button @click="fetchImage" role="button" class="btn btn-primary">New one!</button>
+        <button @click="fetchImage" role="button" class="btn btn-primary" :disabled="isLoading">New one!</button>
         <NuxtLink role="button" class="btn btn-primary" to="/random/neko">Better experience in the random page!</NuxtLink>
         <button @click="embeddedDownload" role="button" class="btn btn-primary">Download image!</button>
       </div>
