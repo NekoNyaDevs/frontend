@@ -41,8 +41,8 @@
                 Utilities
               </a>
               <ul class="dropdown-menu">
-                <li><NuxtLink class="dropdown-item" to="/api/v1/8ball?cute=true">8ball</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" to="/api/v1/owoify?text=">Owoify</NuxtLink></li>
+                <li><a class="dropdown-item" href="/api/v1/8ball?cute=true">8ball</a></li>
+                <li><a class="dropdown-item" href="/api/v1/owoify?text=">Owoify</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -50,11 +50,11 @@
                 Others
               </a>
               <ul class="dropdown-menu" aria-labelledby="otherDropdown">
-                <li><NuxtLink class="dropdown-item" to="/api/v1/">API</NuxtLink></li>
+                <li><a class="dropdown-item" href="/api/v1/">API</a></li>
                 <li><NuxtLink class="dropdown-item" to="/random/lewd">NSFW</NuxtLink></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><NuxtLink class="dropdown-item" target="_blank" to="/discord">Post images</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" target="_blank" to="/contact">Contact Us</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" target="_blank" to="https://discord.gg/DUnuSfFdEM">Post images</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" target="_blank" to="mailto://contact@classydev.fr">Contact Us</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" target="_blank" to="https://docs.classydev.fr/nekonya">API Docs</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" target="_blank" to="https://github.com/NekoNyaDevs">Github</NuxtLink></li>
                 <li><hr class="dropdown-divider"></li>

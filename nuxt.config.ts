@@ -12,6 +12,31 @@ export default defineNuxtConfig({
       ]
     }
   },
+  ssr: false,
 
-  modules: ["@nuxt/scripts"]
+  routeRules: {
+    "/random": {
+      redirect: {
+        to: "/random/neko",
+        statusCode: 302
+      }
+    },
+  },
+
+  ...(process.env.NODE_ENV === 'development' && {
+    vite: {
+      server: {
+        proxy: {
+          "/api": {
+            target: "http://localhost:3001",
+            changeOrigin: true
+          }
+        }
+      }
+    }
+  }),
+
+  modules: [
+    "@nuxt/scripts"
+  ]
 })

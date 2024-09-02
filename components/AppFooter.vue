@@ -10,8 +10,8 @@
     </div>
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex fs-3">
       <li class="ms-3"><NuxtLink to="https://github.com/NekoNyaDevs/website" class="text-reset"><i class="bi bi-github"></i></NuxtLink></li>
-      <li class="ms-3"><NuxtLink to="/l/discord" class="text-reset"><i class="bi bi-discord"></i></NuxtLink></li>
-      <li class="ms-3"><NuxtLink to="/l/contact" class="text-reset"><i class="bi bi-envelope-fill"></i></NuxtLink></li>
+      <li class="ms-3"><NuxtLink to="https://discord.gg/DUnuSfFdEM" class="text-reset"><i class="bi bi-discord"></i></NuxtLink></li>
+      <li class="ms-3"><NuxtLink to="mailto://contact@classydev.fr" class="text-reset"><i class="bi bi-envelope-fill"></i></NuxtLink></li>
     </ul>
   </footer>
 </template>
