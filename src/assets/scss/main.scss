@@ -56,7 +56,7 @@ $btn-font-size: 16px;
   text-align: center;
 }
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 
 @each $name, $color in $themes-color {
   .btn-#{$name} {

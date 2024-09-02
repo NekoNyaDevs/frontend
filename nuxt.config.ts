@@ -3,6 +3,10 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
 
+  appId: "nekonya",
+  buildDir: "dist",
+  srcDir: "src",
+
   app: {
     head: {
       script: [
@@ -35,6 +39,10 @@ export default defineNuxtConfig({
       }
     }
   }),
+
+  css: [
+      "~/assets/scss/main.scss"
+  ],
 
   modules: [
     "@nuxt/scripts"
