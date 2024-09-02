@@ -1,4 +1,4 @@
-# 🌿・NekoNya-Storage
+# 🌿・NekoNya-Frontend
 
 ## 📝・Description
 
