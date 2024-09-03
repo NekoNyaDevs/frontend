@@ -11,6 +11,11 @@ export default defineNuxtConfig({
       script: [
         {
           src: "/bootstrap.bundle.min.js"
+        },
+        {
+          src: "https://plausible.classydev.fr/js/script.js",
+          defer: true,
+          "data-domain": "nekonya.classydev.fr"
         }
       ]
     }
