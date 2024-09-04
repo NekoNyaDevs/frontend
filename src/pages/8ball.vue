@@ -1,13 +1,16 @@
 <script setup lang="ts">
 const eightballResult = ref<string>('');
 const cute = ref<boolean>(false);
+const isLoading = ref<boolean>(false);
 
 const getAnswer = async () => {
+  isLoading.value = true;
   const res = await $fetch("/api/v1/8ball?cute=" + cute.value).catch(() => null);
 
   if (!res) return "An error occurred while getting the answer";
 
   eightballResult.value = res.answer;
+  isLoading.value = false;
 }
 </script>
 
@@ -16,12 +19,12 @@ const getAnswer = async () => {
     <div class="row">
       <div class="col-12">
         <h1 class="text-center">8ball</h1>
-        <div class="col-1 col-sm-3 mx-auto">
+        <div class="col-6 col-sm-3 mx-auto">
           <div class="form-check">
             <input v-model="cute" type="checkbox" class="form-check-input" id="cute" />
             <label class="form-check-label" for="cute">Cute?</label>
           </div>
-          <button class="btn btn-primary" role="button" @click="getAnswer">Get an answer</button>
+          <button class="btn btn-primary" :disabled="isLoading" role="button" @click="getAnswer">Get an answer</button>
         </div>
       </div>
     </div>
