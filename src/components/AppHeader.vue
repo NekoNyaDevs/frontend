@@ -53,12 +53,13 @@
                 <li><a class="dropdown-item" href="/api/v1/">API</a></li>
                 <li><NuxtLink class="dropdown-item" to="/random/lewd">NSFW</NuxtLink></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><NuxtLink class="dropdown-item" target="_blank" to="https://discord.gg/DUnuSfFdEM">Post images</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" target="_blank" to="mailto://contact@classydev.fr">Contact Us</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" target="_blank" to="https://docs.classydev.fr/nekonya">API Docs</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" target="_blank" to="https://github.com/NekoNyaDevs">Github</NuxtLink></li>
+                <li><a class="dropdown-item" target="_blank" href="https://discord.gg/DUnuSfFdEM">Post images</a></li>
+                <li><a class="dropdown-item" target="_blank" href="mailto://contact@classydev.fr">Contact Us</a></li>
+                <li><a class="dropdown-item" target="_blank" href="https://docs.classydev.fr/nekonya">API Docs</a></li>
+                <li><a class="dropdown-item" target="_blank" href="https://github.com/NekoNyaDevs">Github</a></li>
+                <li><a class="dropdown-item" target="_blank" href="https://discord.com/oauth2/authorize?client_id=1143297786566164624&permissions=8&integration_type=0&scope=bot+applications.commands">Discord Bot</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><NuxtLink class="dropdown-item disabled" href="#">More Soon...</NuxtLink></li>
+                <li><a class="dropdown-item disabled" href="#">More Soon...</a></li>
               </ul>
             </li>
           </ul>
