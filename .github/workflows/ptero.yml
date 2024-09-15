@@ -3,7 +3,7 @@ name: Restart pterodactyl server
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   restart:
