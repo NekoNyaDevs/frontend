@@ -31,7 +31,7 @@ onMounted(() => {
     </div>
     <div class="d-flex align-items-center justify-content-center flex-wrap flex-column center">
       <div class="rounded p-0 border border-3 border-primary image-main-frame">
-        <img :src="imageUrl" v-if="imageUrl" alt="neko" class="object-fit-contain main-image" @error="$event.target.src='https://http.cat/404'" />
+        <img :src="imageUrl" loading="lazy" v-if="imageUrl" alt="neko" class="object-fit-contain main-image" @error="$event.target.src='https://http.cat/404'" />
       </div>
       <div class="btn-toolbar justify-content-center gap-2 mt-2" role="group">
         <button @click="fetchImage" role="button" class="btn btn-primary" :disabled="isLoading">New one!</button>

@@ -43,7 +43,7 @@ onMounted(() => {
     </div>
     <div class="row">
       <div class="d-flex justify-content-center">
-        <img class="img-fluid mt-3 mx-auto" v-if="imageUrl" @error="$event.target.src='https://http.cat/404'" :alt="$route.params.type" :src="imageUrl">
+        <img class="img-fluid mt-3 mx-auto" loading="lazy" v-if="imageUrl" @error="$event.target.src='https://http.cat/404'" :alt="$route.params.type" :src="imageUrl">
       </div>
     </div>
   </main>
