@@ -1,10 +1,8 @@
 <template>
-  <div>
     <NuxtLoadingIndicator color="#eb7763" :throttle="0" :height="3" />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -22,7 +20,6 @@ useSeoMeta({
   twitterImage: 'https://nekonya.classydev.fr/img/logo_rounded.png',
   twitterTitle: 'NekoNya, website for nekos',
   twitterDescription: 'Utility anime and neko themed website, with an API and some other cool features.',
-  twitterUrl: 'https://nekonya.classydev.fr',
   ogUrl: 'https://nekonya.classydev.fr',
   ogType: 'website',
   ogSiteName: 'NekoNya',
