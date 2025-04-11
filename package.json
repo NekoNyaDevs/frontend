@@ -1,24 +1,24 @@
 {
-  "name": "nekonya-frontend",
-  "private": true,
-  "version": "1.0.3",
-  "type": "module",
-  "license": "GPL-3.0-or-later",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "@nuxt/scripts": "^0.7.1",
-    "bootstrap": "^5.3.3",
-    "cross-env": "^7.0.3",
-    "nuxt": "^3.13.0",
-    "vue": "latest"
-  },
-  "devDependencies": {
-    "sass": "^1.77.8"
-  }
+    "name": "nekonya-frontend",
+    "private": true,
+    "version": "1.0.3",
+    "type": "module",
+    "license": "GPL-3.0-or-later",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "dependencies": {
+        "@nuxt/scripts": "^0.7.1",
+        "bootstrap": "^5.3.3",
+        "cross-env": "^7.0.3",
+        "nuxt": "^3.16.2",
+        "vue": "latest"
+    },
+    "devDependencies": {
+        "sass": "^1.77.8"
+    }
 }
