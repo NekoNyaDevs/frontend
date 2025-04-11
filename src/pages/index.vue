@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import download from '~/utils/download';
+import type { APIRandomImageResponse } from "~/types/apiResponses";
 
 const imageUrl = ref<string>('');
 const isLoading = ref<boolean>(false);
@@ -7,7 +8,7 @@ const type = "neko";
 
 const fetchImage = async () => {
     isLoading.value = true;
-    const res = await $fetch(`/api/v1/random/${type}`).catch(() => null) as any | null;
+    const res = await $fetch(`/api/v1/random/${type}`).catch(() => null) as APIRandomImageResponse | null;
     if (!res) imageUrl.value = 'https://http.cat/404';
     else imageUrl.value = res.url;
     isLoading.value = false;

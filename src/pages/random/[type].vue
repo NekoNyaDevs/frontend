@@ -1,20 +1,21 @@
 <script setup lang="ts">
-import download from '~/utils/download';
+import download from "~/utils/download";
+import type { APIRandomImageResponse } from "~/types/apiResponses";
 
 definePageMeta({
-    middleware: 'random'
+    middleware: "random"
 });
 
 const route = useRoute();
 
-const imageUrl = ref<string>('');
+const imageUrl = ref<string>("");
 const type = ref<string>(route.params.type as string);
 const isLoading = ref<boolean>(false);
 
 const fetchImage = async () => {
     isLoading.value = true;
-    const res = await $fetch(`/api/v1/random/${type.value}`).catch(() => null) as any; // TODO make a type for the response (each respectively)
-    if (!res) imageUrl.value = 'https://http.cat/404';
+    const res = await $fetch(`/api/v1/random/${type.value}`).catch(() => null) as APIRandomImageResponse | null;
+    if (!res) imageUrl.value = "https://http.cat/404";
     else imageUrl.value = res.url;
     isLoading.value = false;
 };
@@ -44,7 +45,7 @@ onMounted(() => {
         <div class="row">
             <div class="d-flex justify-content-center">
                 <img class="img-fluid mt-3 mx-auto" loading="lazy" v-if="imageUrl"
-                     @error="($event.target as HTMLImageElement).src='https://http.cat/404'" :alt="$route.params.type"
+                     @error="($event.target as HTMLImageElement).src='https://http.cat/404'" :alt="type"
                      :src="imageUrl">
             </div>
         </div>

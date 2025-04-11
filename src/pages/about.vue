@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
     <main class="container d-flex justify-content-center main p-4">
         <div class="row max-width-100 flex-column justify-content-start align-items-center">

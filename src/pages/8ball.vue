@@ -1,15 +1,17 @@
 <script setup lang="ts">
-const eightballResult = ref<string>('');
+import type { APIEightBallResponse } from "~/types/apiResponses";
+
+const eightBallResult = ref<string>("");
 const cute = ref<boolean>(false);
 const isLoading = ref<boolean>(false);
 
 const getAnswer = async () => {
     isLoading.value = true;
-    const res = await $fetch("/api/v1/8ball?cute=" + cute.value).catch(() => null) as any;
+    const res = await $fetch("/api/v1/8ball?cute=" + cute.value).catch(() => null) as APIEightBallResponse | null;
 
     if (!res) return "An error occurred while getting the answer";
 
-    eightballResult.value = res.answer;
+    eightBallResult.value = res.answer;
     isLoading.value = false;
 }
 </script>
@@ -32,8 +34,8 @@ const getAnswer = async () => {
         </div>
         <div class="row px-3">
             <div class="col-12 p-0">
-                <h2 v-if="eightballResult" class="text-center">Result</h2>
-                <p v-if="eightballResult" class="bg-light rounded py-2 px-3 whitespace-pre">{{ eightballResult }}</p>
+                <h2 v-if="eightBallResult" class="text-center">Result</h2>
+                <p v-if="eightBallResult" class="bg-light rounded py-2 px-3 whitespace-pre">{{ eightBallResult }}</p>
             </div>
         </div>
     </main>
